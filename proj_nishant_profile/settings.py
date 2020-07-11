@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'flg&ag_$1p#(9lz1%h!*67+soscqoab=1#e+u-@5c!9y@91c8@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shrouded-wave-58817.herokuapp.com']
 
 
 # Application definition
