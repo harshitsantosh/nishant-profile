@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'proj_nishant_profile.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nishant_profile',
-        'USER': 'postgres',
-        'PASSWORD': 'django1234',
-        'HOST': 'localhost',
+        'NAME': 'ddg05peun313td',
+        'USER': 'gbfukwiqemwvss',
+        'PASSWORD': 'e4108d95914daf3865eee82180d0d8c714c3e7cae59bd0cbfdd110916e602112',
+        'HOST': 'ec2-34-200-15-192.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
