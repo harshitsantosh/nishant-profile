@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap\bootstrap-4.5.0\dist\css\bootstrap.min.css' %}">
+
+    <title>Nishant Raj</title>
+
+    <style type="text/css">
+
+        html {
+            height: 100%;
+        }
+
+        body {
+         background-image: url("{% static 'images\Rectangle 1.png' %}");
+         height:100%;
+
+
+        }
+        .project_header {
+        background-image: url("{% static 'images\Group 788.png' %}");
+        }
+
+        #page-content {
+          flex: 1 0 auto;
+        }
+
+        #sticky-footer {
+          flex-shrink: none;
+          background-image: url("{% static 'images\footer_background.JPG' %}");
+
+
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div id='page-content'>
+    <div class='container '>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <img src="{% static 'images\Logo.png' %}">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">PROJECTS</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">AUDIOBOOKS</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class='row project_header' style="height:500px;">
+
+            <div class="col-sm-12 col-lg-6 my-auto">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 form-group">
+                        <h2 style='color:red'>
+                            MY PROJECTS
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 form-group">
+                        <p>
+                            Be it tinkering with mobile or web app development or exploring data analytics and machine
+                            learning,
+                            I keep myself busy with all things innovation which help my skillset and aptitude grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-12 my-auto">
+                <img src="{% static 'images\Project Graphic 1.png' %}" width="100%" height="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <h2 style='color:red' class="mt-4">
+                    MY APPLICATIONS
+                </h2>
+            </div>
+        </div>
+        <div class='row mt-4'>
+
+            {% for application in applications %}
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <img src="{{ application.image.url }}" height="250px" width="100%">
+                <h4 style='color:red; text-align:center'> {{ application.title }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <h2 style='color:red' class="mt-4">
+                    APPS I USE
+                </h2>
+            </div>
+        </div>
+        <div class='row mt-4'>
+
+            {% for app in apps %}
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <img src="{{ app.image.url }}" height="250px" width="100%">
+                <h4 style='color:red; text-align:center'> {{ app.title }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <h2 style='color:red' class="mt-4">
+                    COURSES I FOLLOW
+                </h2>
+            </div>
+        </div>
+        <div class='row mt-4'>
+
+            {% for course in courses %}
+            <div class="col-lg-5 col-sm-12 col-md-12 col-xs-12 form-group">
+                <img src="{{ course.image.url }}" height="250px" width="100%">
+
+            </div>
+            <div class="col-lg-7 col-sm-12 col-md-12 col-xs-12 form-group my-auto">
+                <h4 style='color:red;'> {{ course.title }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <h2 style='color:red' class="mt-4">
+                    HABITS
+                </h2>
+            </div>
+        </div>
+        <div class='row mt-4'>
+
+            {% for habit in habits %}
+            <div class="col-lg-4 col-sm-12 col-md-12 col-xs-12 form-group">
+                <img src="{{ habit.image.url }}" height="250px" width="100%">
+                <h4 style='color:red; text-align:center'> {{ habit.title }}</h4>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<footer id="sticky-footer" class="py-4" style="">
+    <div class="container text-center">
+        &copy;2020 Nishant Raj
+
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'popper.min.js' %}"></script>
+<script src="{% static 'bootstrap\bootstrap-4.5.0\dist\js\bootstrap.min.js' %}"></script>
+</body>
+</html>
